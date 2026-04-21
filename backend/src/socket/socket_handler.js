@@ -21,6 +21,10 @@ function initSocket(server){
             });
         });
 
+        socket.on('set_username', (name)=>{
+            socket.username = name;
+        });
+
         socket.on('disconnect', ()=>{
             console.log('User disconnected', socket.id);
         });
