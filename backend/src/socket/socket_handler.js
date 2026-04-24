@@ -35,7 +35,11 @@ function initSocket(server){
                 players: [
                     { socketId: socket.id, symbol: "X" }
                 ],
-                status: "waiting"
+                board: [
+                    [ ["", "", ""], ["", "", ""], ["", "", ""] ]
+                ],
+                currentTurn: 'X',
+                status: "playing"
             };
 
             rooms.set(roomId, room);
